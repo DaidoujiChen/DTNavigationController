@@ -76,7 +76,7 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     if (self == nil) return nil;
     
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor clearColor]];
     
     _style = style;
     _folderItems = [NSMutableArray new];

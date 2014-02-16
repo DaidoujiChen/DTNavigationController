@@ -31,7 +31,7 @@
 #define kDeleteFolderDuration           0.2f
 
 // Background Image
-#define kBarBlackgroundImage            @"FolderBar.png"
+#define kBarBlackgroundImage            @""
 
 // Action Button Blackground Image
 #define kActionButtonImage              @"ActionBtn.png"

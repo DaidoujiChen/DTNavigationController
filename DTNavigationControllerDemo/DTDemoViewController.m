@@ -40,6 +40,7 @@
     
     NSString *title = [NSString stringWithFormat:@"Folder %d", _folderNumber];
     [self setTitle:title];
+    [self.navigationItem setTitleView:DTAutorelease([[UIView alloc] init])];
     
     return self;
 }
