@@ -16,6 +16,7 @@
 // limitations under the License.
 
 #import "DTNavigationController.h"
+#import "DTDrawImages.h"
 
 // ARC control class
 #import "DTRelease.h"
@@ -135,27 +136,6 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
 
 #pragma mark - Overwrite Methods
 
--(UIImage*) kFolderItemIconHomeForIOS7Style {
-    UIGraphicsBeginImageContext(CGSizeMake(30.0f, 30.0f));
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSetLineCap(ctx, kCGLineCapRound);
-    CGContextSetLineWidth(ctx, 1.5f);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f] CGColor]);
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, 16.0f, 1.0f);
-    CGContextAddLineToPoint(ctx, 29.0f, 16.0f);
-    CGContextAddLineToPoint(ctx, 23.0f, 16.0f);
-    CGContextAddLineToPoint(ctx, 23.0f, 29.0f);
-    CGContextAddLineToPoint(ctx, 7.0f, 29.0f);
-    CGContextAddLineToPoint(ctx, 7.0f, 16.0f);
-    CGContextAddLineToPoint(ctx, 1.0f, 16.0f);
-    CGContextAddLineToPoint(ctx, 16.0f, 1.0f);
-    CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return retuinImage;
-}
-
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     [super pushViewController:viewController animated:animated];
@@ -167,7 +147,7 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     DTFolderItem *folderItem = nil;
     
     if (viewController.title == nil && self.viewControllers.count == 1) {
-        folderItem = [DTFolderItem itemWithImage:[self kFolderItemIconHomeForIOS7Style] targer:self action:@selector(tapFolderItem:)];
+        folderItem = [DTFolderItem itemWithImage:[DTDrawImages kFolderItemIconHomeForIOS7Style] targer:self action:@selector(tapFolderItem:)];
         
         if (_folderStyle == DTFolderBarStyleFixedLeftHome || _folderStyle == DTFolderBarStyleFixedHomeAndAtionButton) {
             [_folderBar setLeftItem:folderItem];

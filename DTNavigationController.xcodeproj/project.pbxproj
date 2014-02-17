@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01AAACF918B2364F004C31B0 /* DTDrawImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAACF818B2364F004C31B0 /* DTDrawImages.m */; };
 		55375AEC175051AB0045B905 /* DTDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55375AEB175051AB0045B905 /* DTDemoViewController.m */; };
 		55375AEF175057050045B905 /* FolderBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55375AED175057050045B905 /* FolderBar.png */; };
 		55375AF0175057050045B905 /* FolderBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55375AEE175057050045B905 /* FolderBar@2x.png */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AAACF718B2364F004C31B0 /* DTDrawImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDrawImages.h; sourceTree = "<group>"; };
+		01AAACF818B2364F004C31B0 /* DTDrawImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDrawImages.m; sourceTree = "<group>"; };
 		55375AEA175051AB0045B905 /* DTDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDemoViewController.h; sourceTree = "<group>"; };
 		55375AEB175051AB0045B905 /* DTDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDemoViewController.m; sourceTree = "<group>"; };
 		55375AED175057050045B905 /* FolderBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FolderBar.png; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				55AC45FC172E0E600091D701 /* DTFolderItem.m */,
 				558868D0172A6509008FA5A3 /* DTNavigationController.h */,
 				558868D1172A6509008FA5A3 /* DTNavigationController.m */,
+				01AAACF718B2364F004C31B0 /* DTDrawImages.h */,
+				01AAACF818B2364F004C31B0 /* DTDrawImages.m */,
 			);
 			name = DTNavigationController;
 			path = ../DTNavigationController;
@@ -265,6 +270,7 @@
 				558868C7172A64D4008FA5A3 /* DTViewController.m in Sources */,
 				55375AEC175051AB0045B905 /* DTDemoViewController.m in Sources */,
 				558868D2172A6509008FA5A3 /* DTNavigationController.m in Sources */,
+				01AAACF918B2364F004C31B0 /* DTDrawImages.m in Sources */,
 				558868D5172A7B55008FA5A3 /* DTFolderBar.m in Sources */,
 				55AC45FD172E0E600091D701 /* DTFolderItem.m in Sources */,
 			);

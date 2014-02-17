@@ -16,9 +16,6 @@
 
 /* At DTNavigation */
 
-// Home image
-#define kFolderItemIcon                 @"Home.png"
-
 // Folder Item Text Color
 #define kFolderItemTextColor            [UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f]
 
@@ -30,9 +27,6 @@
 #define kAddFolderDuration              0.2f
 #define kDeleteFolderDuration           0.2f
 
-// Background Image
-#define kBarBlackgroundImage            @""
-
 // Action Button Blackground Image
 #define kActionButtonImage              @"ActionBtn.png"
 #define kActionButtonPressImage         @"ActionBtnPress.png"
@@ -43,7 +37,3 @@
 
 // Folder Name Limit Length
 #define kFolderNameLimitLength          10
-
-// Background Image
-#define kItemBackgroundImage            @""
-#define kItemBackgroundHighlightedImage @""

@@ -17,6 +17,7 @@
 
 #import "DTFolderItem.h"
 #import "DTRelease.h"
+#import "DTDrawImages.h"
 
 // Config File
 #import "DTFolderConfig.h"
@@ -114,42 +115,11 @@
 
 #pragma mark - Set Subvies
 
--(UIImage*) kItemBackgroundImageForFolderIOS7Style {
-    UIGraphicsBeginImageContext(CGSizeMake(50.0f, 44.0f));
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSetLineCap(ctx, kCGLineCapRound);
-    CGContextSetLineWidth(ctx, 1.5f);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f] CGColor]);
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, 30.0f, 3.0f);
-    CGContextAddLineToPoint(ctx, 44.0f, 22.0f);
-    CGContextAddLineToPoint(ctx, 30.0f, 41.0f);
-    CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return retuinImage;
-}
-
--(UIImage*) kItemBackgroundImageForHomeIOS7Style {
-    UIGraphicsBeginImageContext(CGSizeMake(44.0f, 44.0f));
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSetLineCap(ctx, kCGLineCapRound);
-    CGContextSetLineWidth(ctx, 1.5f);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f] CGColor]);
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, 42.0f, 12.0f);
-    CGContextAddLineToPoint(ctx, 42.0f, 32.0f);
-    CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return retuinImage;
-}
-
 - (void)setViewWithFolderName:(NSString *)folderName
 {
     UIEdgeInsets edgeInsets = UIEdgeInsetsMake(11.0f, 4.0f, 30.0f, 44.0f);
-    UIImage *bgImage = [[self kItemBackgroundImageForFolderIOS7Style] resizableImageWithCapInsets:edgeInsets];
-    UIImage *bgHighlightedImage = [[self kItemBackgroundImageForFolderIOS7Style] resizableImageWithCapInsets:edgeInsets];
+    UIImage *bgImage = [[DTDrawImages kItemBackgroundImageForFolderIOS7Style] resizableImageWithCapInsets:edgeInsets];
+    UIImage *bgHighlightedImage = [[DTDrawImages kItemBackgroundImageForFolderIOS7Style] resizableImageWithCapInsets:edgeInsets];
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImage highlightedImage:bgHighlightedImage];
     [backgroundImageView setFrame:self.frame];
@@ -186,8 +156,8 @@
 
 - (void)setViewWithImage:(UIImage *)iconImage
 {
-    UIImage *bgImage = [self kItemBackgroundImageForHomeIOS7Style];
-    UIImage *bgHighlightedImage = [self kItemBackgroundImageForHomeIOS7Style];
+    UIImage *bgImage = [DTDrawImages kItemBackgroundImageForHomeIOS7Style];
+    UIImage *bgHighlightedImage = [DTDrawImages kItemBackgroundImageForHomeIOS7Style];
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImage highlightedImage:bgHighlightedImage];
     [backgroundImageView setTag:kBackgroundImageViewTag];

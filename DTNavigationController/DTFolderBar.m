@@ -84,7 +84,6 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     UIViewAutoresizing autoresizing = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
-    [backgroundView setImage:[UIImage imageNamed:kBarBlackgroundImage]];
     [backgroundView setTag:kBackgroundViewTag];
     [backgroundView setContentMode:UIViewContentModeScaleToFill];
     [backgroundView setAutoresizingMask:autoresizing];
