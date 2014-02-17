@@ -20,7 +20,7 @@
 #define kFolderItemIcon                 @"Home.png"
 
 // Folder Item Text Color
-#define kFolderItemTextColor            [UIColor whiteColor]
+#define kFolderItemTextColor            [UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f]
 
 ///////////////////////////////////////////////////////////////////////////////
 
