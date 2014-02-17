@@ -45,5 +45,5 @@
 #define kFolderNameLimitLength          10
 
 // Background Image
-#define kItemBackgroundImage            @"FolderItemBgImage.png"
+#define kItemBackgroundImage            @""
 #define kItemBackgroundHighlightedImage @""

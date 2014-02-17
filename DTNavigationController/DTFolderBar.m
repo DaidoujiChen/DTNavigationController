@@ -92,8 +92,8 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     CGRect scrollViewFrame = self.bounds;
     
     if (_style == DTFolderBarStyleFixedLeftHome || _style == DTFolderBarStyleFixedHomeAndAtionButton) {
-        scrollViewFrame.origin.x += 22.0f;
-        scrollViewFrame.size.width -= 22.0f;
+        scrollViewFrame.origin.x += 44.0f;
+        scrollViewFrame.size.width -= 44.0f;
     }
     
     if (_style == DTFolderBarStyleActionButton || _style == DTFolderBarStyleFixedHomeAndAtionButton) {
