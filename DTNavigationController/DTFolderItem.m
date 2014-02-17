@@ -137,8 +137,8 @@
     CGContextSetLineWidth(ctx, 1.5f);
     CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:0 green:0 blue:220.0f/255.0f alpha:0.6f] CGColor]);
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, 42.0f, 2.0f);
-    CGContextAddLineToPoint(ctx, 42.0f, 42.0f);
+    CGContextMoveToPoint(ctx, 42.0f, 12.0f);
+    CGContextAddLineToPoint(ctx, 42.0f, 32.0f);
     CGContextStrokePath(ctx);
     UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
