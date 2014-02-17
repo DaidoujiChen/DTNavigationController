@@ -78,6 +78,7 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.toolbar setBarStyle:UIBarStyleBlackOpaque];
+    [self setDelegate:self];
     
     CGRect blockViewFrame = self.navigationBar.frame;
     blockViewFrame.size.width -= 44.0f;
@@ -392,6 +393,13 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     if (isPortraitOrientation) {
         [_folderBar setFrame:folderFrame];
     }
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    [viewController.navigationItem setTitleView:DTAutorelease([[UIView alloc] init])];
 }
 
 @end

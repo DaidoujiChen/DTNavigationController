@@ -21,7 +21,7 @@
 #import "DTFolderBar.h"
 #import "DTFolderItem.h"
 
-@interface DTNavigationController : UINavigationController
+@interface DTNavigationController : UINavigationController <UINavigationControllerDelegate>
 
 @property (nonatomic, readonly) DTFolderBar *folderBar;
 @property (nonatomic, getter = isFolderBarHidden) BOOL folderBarHidden;
