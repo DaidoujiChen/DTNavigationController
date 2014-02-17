@@ -118,7 +118,7 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     [scrollView setShowsVerticalScrollIndicator:NO];
     [scrollView setContentOffset:CGPointMake(0, 0)];
     [scrollView setAutoresizingMask:autoresizing];
-    [scrollView setBounces:NO];
+    [scrollView setScrollEnabled:NO];
     
     CGRect folderItemViewFrame = self.bounds;
     folderItemViewFrame.size.width = 0;
