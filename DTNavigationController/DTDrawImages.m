@@ -21,9 +21,9 @@
     CGContextAddLineToPoint(ctx, 44.0f, 22.0f);
     CGContextAddLineToPoint(ctx, 30.0f, 41.0f);
     CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *returnImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return retuinImage;
+    return returnImage;
 }
 
 +(UIImage*) kItemBackgroundImageForHomeIOS7Style {
@@ -36,9 +36,9 @@
     CGContextMoveToPoint(ctx, 42.0f, 12.0f);
     CGContextAddLineToPoint(ctx, 42.0f, 32.0f);
     CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *returnImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return retuinImage;
+    return returnImage;
 }
 
 +(UIImage*) kFolderItemIconHomeForIOS7Style {
@@ -57,9 +57,9 @@
     CGContextAddLineToPoint(ctx, 1.0f, 16.0f);
     CGContextAddLineToPoint(ctx, 16.0f, 1.0f);
     CGContextStrokePath(ctx);
-    UIImage *retuinImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *returnImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return retuinImage;
+    return returnImage;
 }
 
 @end
