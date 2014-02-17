@@ -398,8 +398,8 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
 #pragma mark - UINavigationControllerDelegate
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
     [viewController.navigationItem setTitleView:DTAutorelease([[UIView alloc] init])];
+    [viewController.navigationItem setHidesBackButton:YES];
 }
 
 @end

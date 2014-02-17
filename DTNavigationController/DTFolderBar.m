@@ -118,13 +118,14 @@ typedef void (^DTCompletionBlock) (BOOL finshed);
     [scrollView setShowsVerticalScrollIndicator:NO];
     [scrollView setContentOffset:CGPointMake(0, 0)];
     [scrollView setAutoresizingMask:autoresizing];
+    [scrollView setBounces:NO];
     
     CGRect folderItemViewFrame = self.bounds;
     folderItemViewFrame.size.width = 0;
     
     UIView *folderItemView = [[UIView alloc] initWithFrame:folderItemViewFrame];
     [folderItemView setBackgroundColor:[UIColor clearColor]];
-    [folderItemView setClipsToBounds:YES];
+    [folderItemView setClipsToBounds:NO];
     [folderItemView setTag:kFolderItemViewTag];
     [folderItemView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
     
